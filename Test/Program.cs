@@ -5,19 +5,16 @@
   * (Utilice ciclo For)
   *
   */
-Console.WriteLine("\n\n Ejercicio#2: Promedio de Notas");
+Console.WriteLine("\n\n Ejercicio#1: Prueba Corta, Guia#1");
 
-int Promedio = 0;
-int Suma = 0;
-for (int i = 1; i <= 3; i++) {
-  int nota = 0;
-  Console.WriteLine("\n> Coloca la "+i+"º nota: ");
-  nota = int.Parse(Console.ReadLine());
-  Suma = Suma + nota;
-}
-Promedio = Suma / 3;
+Console.Write("\n\n> \t Ingresa un Numero: ");
+int num = Convert.ToInt32(Console.ReadLine());
+int digito = 0;
+int suma = 0;
 
-if (Promedio >= 70)
-  Console.WriteLine("\n ¡Aprobaste! Tu promedio es Mayor a 70 pts. ("+Promedio+") \n\n\n");
-else
-  Console.WriteLine("\n Reprobaste... Tu promedio es Menor a 70 pts. ("+Promedio+") \n\n\n");
+do {
+  digito = num % 10;
+  suma = suma + digito;
+  num = num / 10;
+} while(num != 0);
+Console.WriteLine("Suma total es de: "+suma+"\n\n");
